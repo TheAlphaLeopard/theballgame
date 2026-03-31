@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>laika Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main-menu">
+        <canvas id="menu-canvas"></canvas>
+        <img id="menu-logo" src="/play.gif">
+    </div>
+    <audio id="bg-music" src="/stickfight.mp3" loop preload="auto"></audio>
+    <audio id="boss-music" src="/Ken's Theme (From _Street Fighter II_)-8UXdTwHlJFY.mp3" loop preload="auto"></audio>
+
+    <div id="cloud-layer"></div>
+    <div id="crt-overlay"></div>
+    <div id="crt-overlay-ui"></div>
+
+    <div id="ui-layer">
+        <div id="credits-container">
+            <span id="credits-count">0</span>
+        </div>
+        <div id="items-sidebar">
+            <div id="items-header">
+                <button id="items-toggle">◀</button>
+                <div class="sidebar-title">Items</div>
+            </div>
+            <div id="items-container">
+                <!-- Items injected by JS -->
+            </div>
+        </div>
+
+        <div id="shop-sidebar">
+            <div id="shop-header">
+                <div class="sidebar-title">Shop</div>
+                <button id="shop-toggle">➤</button>
+            </div>
+            <div id="shop-container">
+                <div id="shop-core" class="shop-section">
+                    <!-- Core Buttons injected by JS -->
+                </div>
+                <div id="shop-separator"></div>
+                <div id="shop-special" class="shop-section">
+                    <div class="section-label">Special Balls</div>
+                    <div id="special-grid">
+                        <!-- Special Buttons injected by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="intro-overlay">
+        <img id="intro-img" src="/intro.png">
+        <div id="intro-text-container">
+            <div id="intro-text"></div>
+        </div>
+    </div>
+
+    <div id="ending-overlay">
+        <div id="ending-flash"></div>
+        <img id="ending-extra-sprite" src="/ball10-idle.png">
+        <img id="ending-sprite" src="/ball1-idle.png">
+        <div id="ending-text-container">
+            <div id="ending-text"></div>
+        </div>
+    </div>
+
+    <div id="boss-layer">
+        <div id="boss-ui">
+            <div id="boss-hp-bar"><div id="boss-hp-fill"></div></div>
+            <div id="boss-name">RANG, THE CONSUMER</div>
+        </div>
+        <canvas id="boss-canvas"></canvas>
+        <div id="player-ui">
+            <div id="player-hp-bar"><div id="player-hp-fill"></div></div>
+        </div>
+    </div>
+
+    <div id="tutorial-container">
+        <div id="tutorial-bubble"></div>
+        <img id="tutorial-sprite" src="/ball1-idle.png">
+    </div>
+
+    <canvas id="bg-canvas"></canvas>
+    <canvas id="canvas"></canvas>
+    <script src="game.js"></script>
+</body>
+</html>
+
